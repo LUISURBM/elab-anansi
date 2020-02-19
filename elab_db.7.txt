@@ -1,0 +1,150 @@
+
+--
+-- Indexes for table `hold_sample_import`
+--
+ALTER TABLE `hold_sample_import`
+  ADD PRIMARY KEY (`hold_sample_id`);
+
+
+--
+-- Indexes for table `import_config_machines`
+--
+ALTER TABLE `import_config_machines`
+  ADD PRIMARY KEY (`config_machine_id`);
+
+--
+-- Indexes for table `log_result_updates`
+--
+ALTER TABLE `log_result_updates`
+  ADD PRIMARY KEY (`result_log_id`);
+
+--
+-- Indexes for table `other_config`
+--
+ALTER TABLE `other_config`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Indexes for table `outcome`
+--
+ALTER TABLE `outcome`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `package_details`
+--
+ALTER TABLE `package_details`
+  ADD PRIMARY KEY (`package_id`);
+
+--
+-- Indexes for table `physicians`
+--
+ALTER TABLE `physicians`
+  ADD PRIMARY KEY (`physician_id`);
+
+--
+-- Indexes for table `privileges`
+--
+ALTER TABLE `privileges`
+  ADD PRIMARY KEY (`privilege_id`),
+  ADD KEY `resource_id` (`resource_id`);
+
+--
+-- Indexes for table `province_details`
+--
+ALTER TABLE `province_details`
+  ADD PRIMARY KEY (`province_id`);
+
+--
+-- Indexes for table `report_to_mail`
+--
+ALTER TABLE `report_to_mail`
+  ADD PRIMARY KEY (`report_mail_id`),
+  ADD KEY `batch_id` (`batch_id`);
+
+--
+-- Indexes for table `resources`
+--
+ALTER TABLE `resources`
+  ADD PRIMARY KEY (`resource_id`),
+  ADD UNIQUE KEY `resource_name` (`resource_name`);
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`role_id`);
+
+--
+-- Indexes for table `roles_privileges_map`
+--
+ALTER TABLE `roles_privileges_map`
+  ADD PRIMARY KEY (`map_id`),
+  ADD KEY `role_id` (`role_id`),
+  ADD KEY `privilege_id` (`privilege_id`);
+
+--
+-- Indexes for table `r_art_code_details`
+--
+ALTER TABLE `r_art_code_details`
+  ADD PRIMARY KEY (`art_id`);
+
+--
+-- Indexes for table `r_sample_controls`
+--
+ALTER TABLE `r_sample_controls`
+  ADD PRIMARY KEY (`r_sample_control_id`);
+
+--
+-- Indexes for table `r_sample_rejection_reasons`
+--
+ALTER TABLE `r_sample_rejection_reasons`
+  ADD PRIMARY KEY (`rejection_reason_id`);
+
+--
+-- Indexes for table `r_sample_status`
+--
+ALTER TABLE `r_sample_status`
+  ADD PRIMARY KEY (`status_id`);
+
+--
+-- Indexes for table `r_sample_type`
+--
+ALTER TABLE `r_sample_type`
+  ADD PRIMARY KEY (`sample_id`);
+
+--
+-- Indexes for table `r_specimen_pickers`
+--
+ALTER TABLE `r_specimen_pickers`
+  ADD PRIMARY KEY (`picker_id`);
+
+--
+-- Indexes for table `r_vl_test_reasons`
+--
+ALTER TABLE `r_vl_test_reasons`
+  ADD PRIMARY KEY (`test_reason_id`);
+
+--
+-- Indexes for table `system_config`
+--
+ALTER TABLE `system_config`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Indexes for table `s_vlsm_instance`
+--
+ALTER TABLE `s_vlsm_instance`
+  ADD UNIQUE KEY `vl_instance_id` (`vlsm_instance_id`);
+
+--
+-- Indexes for table `temp_sample_import`
+--
+ALTER TABLE `temp_sample_import`
+  ADD PRIMARY KEY (`temp_sample_id`);
+
+--
+-- Indexes for table `user_admin_details`
+--
+ALTER TABLE `user_admin_details`
+  ADD UNIQUE KEY `user_admin_id` (`user_admin_id`);

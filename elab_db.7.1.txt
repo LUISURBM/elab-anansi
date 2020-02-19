@@ -1,0 +1,47 @@
+
+--
+-- Indexes for table `user_details`
+--
+ALTER TABLE `user_details`
+  ADD PRIMARY KEY (`user_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Indexes for table `vl_facility_map`
+--
+ALTER TABLE `vl_facility_map`
+  ADD PRIMARY KEY (`facility_map_id`),
+  ADD KEY `vl_lab_id` (`vl_lab_id`),
+  ADD KEY `facility_id` (`facility_id`);
+
+--
+-- Indexes for table `vl_imported_controls`
+--
+ALTER TABLE `vl_imported_controls`
+  ADD PRIMARY KEY (`control_id`);
+
+--
+-- Indexes for table `vl_request_form`
+--
+ALTER TABLE `vl_request_form`
+  ADD PRIMARY KEY (`vl_sample_id`),
+  ADD UNIQUE KEY `sample_code` (`sample_code`),
+  ADD KEY `facility_id` (`facility_id`),
+  ADD KEY `art_no` (`patient_art_no`),
+  ADD KEY `sample_id` (`sample_type`),
+  ADD KEY `created_by` (`request_created_by`),
+  ADD KEY `status` (`result_status`);
+
+--
+-- Indexes for table `vl_treshhold`
+--
+ALTER TABLE `vl_treshhold`
+  ADD PRIMARY KEY (`thresh_id`);
+
+--
+-- Indexes for table `vl_user_facility_map`
+--
+ALTER TABLE `vl_user_facility_map`
+  ADD PRIMARY KEY (`user_facility_map_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `facility_id` (`facility_id`);

@@ -1,0 +1,114 @@
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vl_treshhold`
+--
+
+CREATE TABLE `vl_treshhold` (
+  `thresh_id` int(2) NOT NULL AUTO_INCREMENT,
+  `facility_id` int(11) NOT NULL,
+  `current_tresh` int(11) NOT NULL,
+  `total_tresh` int(11) NOT NULL,
+  CONSTRAINT thresh_pk PRIMARY KEY (thresh_id)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vl_treshhold`
+--
+
+INSERT INTO `vl_treshhold` (`thresh_id`, `facility_id`, `current_tresh`, `total_tresh`) VALUES
+(1, 222, 48, 72),
+(2, 223, 0, 72),
+(3, 224, 0, 72),
+(4, 225, 0, 48),
+(5, 226, 0, 48),
+(6, 227, 0, 48),
+(7, 228, 0, 48),
+(8, 229, 0, 48),
+(9, 230, 0, 48);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vl_user_facility_map`
+--
+
+CREATE TABLE `vl_user_facility_map` (
+  `user_facility_map_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(255) NOT NULL,
+  `facility_id` int(11) NOT NULL,
+  CONSTRAINT user_facility_map_pk PRIMARY KEY (user_facility_map_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `activity_log`
+--
+ALTER TABLE `activity_log`
+  ADD PRIMARY KEY (`log_id`);
+
+--
+-- Indexes for table `apps_countries`
+--
+ALTER TABLE `apps_countries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `batch_details`
+--
+ALTER TABLE `batch_details`
+  ADD PRIMARY KEY (`batch_id`);
+
+--
+-- Indexes for table `batch_details_idsr`
+--
+ALTER TABLE `batch_details_idsr`
+  ADD PRIMARY KEY (`batch_id`);
+
+--
+-- Indexes for table `contact_notes_details`
+--
+ALTER TABLE `contact_notes_details`
+  ADD PRIMARY KEY (`contact_notes_id`),
+  ADD KEY `treament_contact_id` (`treament_contact_id`);
+
+--
+-- Indexes for table `di_request_form`
+--
+ALTER TABLE `di_request_form`
+  ADD PRIMARY KEY (`di_sample_id`),
+  ADD UNIQUE KEY `sample_code` (`sample_code`),
+  ADD KEY `facility_id` (`facility_id`),
+  ADD KEY `art_no` (`patient_art_no`),
+  ADD KEY `sample_id` (`sample_type`),
+  ADD KEY `created_by` (`request_created_by`),
+  ADD KEY `status` (`result_status`);
+
+--
+-- Indexes for table `facility_details`
+--
+ALTER TABLE `facility_details`
+  ADD PRIMARY KEY (`facility_id`);
+
+
+--
+-- Indexes for table `facility_details2`
+--
+ALTER TABLE `facility_details2`
+  ADD PRIMARY KEY (`facility_id`);
+
+--
+-- Indexes for table `facility_type`
+--
+ALTER TABLE `facility_type`
+  ADD PRIMARY KEY (`facility_type_id`);
+
+--
+-- Indexes for table `form_details`
+--
+ALTER TABLE `form_details`
+  ADD PRIMARY KEY (`vlsm_country_id`);

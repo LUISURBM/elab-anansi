@@ -1,0 +1,207 @@
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `activity_log`
+--
+ALTER TABLE `activity_log`
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6923;
+--
+-- AUTO_INCREMENT for table `apps_countries`
+--
+ALTER TABLE `apps_countries`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+--
+-- AUTO_INCREMENT for table `batch_details`
+--
+ALTER TABLE `batch_details`
+  MODIFY `batch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `batch_details_idsr`
+--
+ALTER TABLE `batch_details_idsr`
+  MODIFY `batch_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `contact_notes_details`
+--
+ALTER TABLE `contact_notes_details`
+  MODIFY `contact_notes_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `di_request_form`
+--
+ALTER TABLE `di_request_form`
+  MODIFY `di_sample_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `facility_details`
+--
+ALTER TABLE `facility_details`
+  MODIFY `facility_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=269;
+--
+-- AUTO_INCREMENT for table `facility_details2`
+--
+ALTER TABLE `facility_details2`
+  MODIFY `facility_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=188;
+--
+-- AUTO_INCREMENT for table `facility_type`
+--
+ALTER TABLE `facility_type`
+  MODIFY `facility_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `form_details`
+--
+ALTER TABLE `form_details`
+  MODIFY `vlsm_country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `hold_sample_import`
+--
+ALTER TABLE `hold_sample_import`
+  MODIFY `hold_sample_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `import_config`
+--
+ALTER TABLE `import_config`
+  MODIFY `config_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `import_config_machines`
+--
+ALTER TABLE `import_config_machines`
+  MODIFY `config_machine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `log_result_updates`
+--
+ALTER TABLE `log_result_updates`
+  MODIFY `result_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=590;
+--
+-- AUTO_INCREMENT for table `outcome`
+--
+ALTER TABLE `outcome`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `package_details`
+--
+ALTER TABLE `package_details`
+  MODIFY `package_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `physicians`
+--
+ALTER TABLE `physicians`
+  MODIFY `physician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `privileges`
+--
+ALTER TABLE `privileges`
+  MODIFY `privilege_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+--
+-- AUTO_INCREMENT for table `province_details`
+--
+ALTER TABLE `province_details`
+  MODIFY `province_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `report_to_mail`
+--
+ALTER TABLE `report_to_mail`
+  MODIFY `report_mail_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `resources`
+--
+ALTER TABLE `resources`
+  MODIFY `resource_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `roles_privileges_map`
+--
+ALTER TABLE `roles_privileges_map`
+  MODIFY `map_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3286;
+--
+-- AUTO_INCREMENT for table `r_art_code_details`
+--
+ALTER TABLE `r_art_code_details`
+  MODIFY `art_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+--
+-- AUTO_INCREMENT for table `r_sample_controls`
+--
+ALTER TABLE `r_sample_controls`
+  MODIFY `r_sample_control_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `r_sample_rejection_reasons`
+--
+ALTER TABLE `r_sample_rejection_reasons`
+  MODIFY `rejection_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+--
+-- AUTO_INCREMENT for table `r_sample_status`
+--
+ALTER TABLE `r_sample_status`
+  MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `r_sample_type`
+--
+ALTER TABLE `r_sample_type`
+  MODIFY `sample_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `r_specimen_pickers`
+--
+ALTER TABLE `r_specimen_pickers`
+  MODIFY `picker_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `r_vl_test_reasons`
+--
+ALTER TABLE `r_vl_test_reasons`
+  MODIFY `test_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `temp_sample_import`
+--
+ALTER TABLE `temp_sample_import`
+  MODIFY `temp_sample_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user_admin_details`
+--
+ALTER TABLE `user_admin_details`
+  MODIFY `user_admin_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user_details`
+--
+ALTER TABLE `user_details`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+--
+-- AUTO_INCREMENT for table `vl_imported_controls`
+--
+ALTER TABLE `vl_imported_controls`
+  MODIFY `control_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `vl_request_form`
+--
+ALTER TABLE `vl_request_form`
+  MODIFY `vl_sample_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=735;
+--
+-- AUTO_INCREMENT for table `vl_user_facility_map`
+--
+ALTER TABLE `vl_user_facility_map`
+  MODIFY `user_facility_map_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `contact_notes_details`
+--
+ALTER TABLE `contact_notes_details`
+  ADD CONSTRAINT `contact_notes_details_ibfk_1` FOREIGN KEY (`treament_contact_id`) REFERENCES `vl_request_form` (`vl_sample_id`);
+
+--
+-- Constraints for table `privileges`
+--
+ALTER TABLE `privileges`
+  ADD CONSTRAINT `privileges_ibfk_1` FOREIGN KEY (`resource_id`) REFERENCES `resources` (`resource_id`);
+
+--
+-- Constraints for table `report_to_mail`
+--
+ALTER TABLE `report_to_mail`
+  ADD CONSTRAINT `report_to_mail_ibfk_1` FOREIGN KEY (`batch_id`) REFERENCES `batch_details` (`batch_id`);

@@ -1,0 +1,30 @@
+
+--
+-- Constraints for table `roles_privileges_map`
+--
+ALTER TABLE `roles_privileges_map`
+  ADD CONSTRAINT `roles_privileges_map_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`),
+  ADD CONSTRAINT `roles_privileges_map_ibfk_2` FOREIGN KEY (`privilege_id`) REFERENCES `privileges` (`privilege_id`);
+
+--
+-- Constraints for table `user_details`
+--
+ALTER TABLE `user_details`
+  ADD CONSTRAINT `user_details_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`);
+
+--
+-- Constraints for table `vl_facility_map`
+--
+ALTER TABLE `vl_facility_map`
+  ADD CONSTRAINT `vl_facility_map_ibfk_1` FOREIGN KEY (`vl_lab_id`) REFERENCES `facility_details2` (`facility_id`),
+  ADD CONSTRAINT `vl_facility_map_ibfk_2` FOREIGN KEY (`facility_id`) REFERENCES `facility_details2` (`facility_id`);
+
+--
+-- Constraints for table `vl_request_form`
+--
+ALTER TABLE `vl_request_form`
+  ADD CONSTRAINT `vl_request_form_ibfk_5` FOREIGN KEY (`result_status`) REFERENCES `r_sample_status` (`status_id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
